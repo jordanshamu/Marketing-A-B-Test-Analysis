@@ -1,0 +1,15 @@
+{
+  "test_date": "2026-02-11",
+  "total_users": 588101,
+  "ad_users": 564577,
+  "psa_users": 23524,
+  "ad_conversions": 14423,
+  "psa_conversions": 420,
+  "ad_conv_rate": 0.025546559636683747,
+  "psa_conv_rate": 0.01785410644448223,
+  "absolute_lift": 0.007692453192201517,
+  "relative_lift": 42.45810055865922,
+  "p_value": 1.7052807161559727e-13,
+  "effect_size": 0.053002578606030915,
+  "statistically_significant": true
+}
