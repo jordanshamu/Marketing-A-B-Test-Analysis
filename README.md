@@ -11,7 +11,7 @@ A comprehensive A/B test analysis evaluating the effectiveness of advertising ca
 This analysis examines data from **588,101 users** across two experimental groups to determine whether showing advertisements leads to higher conversion rates compared to public service announcements.
 
 ### Key Results
-- **42.9% relative increase** in conversion rate for ad group
+- **43.1% relative increase** in conversion rate for ad group (2.55% vs 1.79%)
 - **Statistically significant** results (p < 0.001)
 - **Large sample size** ensures robust findings
 - **Comprehensive segmentation** reveals user behavior patterns
@@ -73,13 +73,13 @@ ab-test-marketing/
 ### Overall Performance
 | Metric | Ad Group | PSA Group | Lift |
 |--------|----------|-----------|------|
-| Conversion Rate | 2.55% | 1.79% | **+42.9%** |
+| Conversion Rate | 2.55% | 1.79% | **+43.1%** |
 | 95% CI | [2.51%, 2.60%] | [1.63%, 1.96%] | - |
 | Sample Size | 564,577 | 23,524 | - |
 
 ### Statistical Significance
 - **P-value:** < 0.001 (highly significant)
-- **Effect Size:** 0.18 (small to medium)
+- **Effect Size (Cohen's h):** 0.053 (very small in absolute terms; the relative lift is large because the PSA base rate is 1.8%)
 - **Conclusion:** Strong evidence that ads improve conversion rates
 
 ### Segmentation Insights
@@ -107,8 +107,8 @@ pip (Python package manager)
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/ab-test-marketing.git
-cd ab-test-marketing
+git clone https://github.com/jordanshamu/Marketing-A-B-Test-Analysis.git
+cd Marketing-A-B-Test-Analysis
 ```
 
 2. **Install dependencies**
