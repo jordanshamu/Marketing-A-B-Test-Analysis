@@ -11,10 +11,10 @@ A comprehensive A/B test analysis evaluating the effectiveness of advertising ca
 This analysis examines data from **588,101 users** across two experimental groups to determine whether showing advertisements leads to higher conversion rates compared to public service announcements.
 
 ### Key Results
-- **43.1% relative increase** in conversion rate for ad group (2.55% vs 1.79%)
+- The data shows a **43.1% relative lift** in conversion for the ad group (2.55% vs 1.79%)
 - **Statistically significant** results (p < 0.001)
 - **Large sample size** ensures robust findings
-- **Comprehensive segmentation** reveals user behavior patterns
+- **Exploratory segmentation** by ad exposure (observational, not randomized)
 
 ## Business Question
 
@@ -60,13 +60,11 @@ ab-test-marketing/
 - **Significance Level:** α = 0.05
 - **Confidence Intervals:** Wilson method (95% CI)
 - **Effect Size:** Cohen's h
-- **Multiple Testing Correction:** Bonferroni correction for segments
 
 ### Data Quality Checks
-- Sample Ratio Mismatch (SRM) testing
+- Observed group split: 96.0% ad / 4.0% PSA. The dataset description says most users saw ads and a small control group saw PSAs, but gives no target ratio, so a sample ratio mismatch (SRM) check can't be verified
 - Duplicate detection
 - Missing value analysis
-- Randomization validation
 
 ## Key Findings
 
@@ -74,7 +72,7 @@ ab-test-marketing/
 | Metric | Ad Group | PSA Group | Lift |
 |--------|----------|-----------|------|
 | Conversion Rate | 2.55% | 1.79% | **+43.1%** |
-| 95% CI | [2.51%, 2.60%] | [1.63%, 1.96%] | - |
+| 95% CI | [2.51%, 2.60%] | [1.62%, 1.96%] | - |
 | Sample Size | 564,577 | 23,524 | - |
 
 ### Statistical Significance
@@ -82,8 +80,10 @@ ab-test-marketing/
 - **Effect Size (Cohen's h):** 0.053 (very small in absolute terms; the relative lift is large because the PSA base rate is 1.8%)
 - **Conclusion:** Strong evidence that ads improve conversion rates
 
-### Segmentation Insights
-1. **Engagement Level:** Higher engagement users show greater ad response
+### Segmentation Insights (exploratory)
+Segments are based on ad exposure (total ads, most-ads day, most-ads hour), which was not randomized. These comparisons are observational and were not tested for significance.
+
+1. **Engagement Level:** Users who saw more ads converted more often in both groups; the ad group's rate was higher at every level
 2. **Day of Week:** Conversion patterns vary by weekday vs weekend
 3. **Time of Day:** Peak performance during afternoon/evening hours
 
@@ -189,7 +189,6 @@ This project demonstrates proficiency in:
    - Hypothesis testing (z-test, chi-square)
    - Confidence interval estimation
    - Effect size calculation
-   - Multiple testing corrections
 
 3. **Data Analysis**
    - Exploratory data analysis (EDA)
@@ -235,7 +234,6 @@ This project demonstrates proficiency in:
 
 2. **Best Practices**
    - Sample Ratio Mismatch: https://dl.acm.org/doi/10.1145/3292500.3330722
-   - Multiple Testing: Bonferroni Correction
 
 3. **Python Libraries**
    - statsmodels documentation: https://www.statsmodels.org/

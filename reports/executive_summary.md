@@ -3,11 +3,12 @@
 **Analyst:** Jordan Shamukiga · **Data:** Kaggle Marketing A/B Testing (588,101 real users)
 
 ## Bottom line
-Showing ads instead of public service announcements (PSAs) raised conversion from 1.79% to 2.55%, a 43.1% relative lift. With 588,101 users the difference is not plausibly chance (p < 0.001). Ads should replace PSAs, provided a conversion is worth more than the extra ad cost per converted user.
+The data shows a 43.1% relative lift in conversion for users shown ads (2.55%) over users shown public service announcements (PSAs, 1.79%). With 588,101 users the difference is not plausibly chance (p < 0.001). Ads should replace PSAs, provided a conversion is worth more than the extra ad cost per converted user.
 
 ## What was tested
 - 564,577 users saw ads; 23,524 saw PSAs (a 96/4 split, with PSAs as the small control group).
 - Outcome: whether the user converted.
+- Intended allocation: not documented (the dataset description says only that most users saw ads), so sample ratio mismatch can't be verified.
 - Checks before testing: no duplicate users; group sizes reviewed.
 
 ## Results
@@ -18,8 +19,8 @@ Showing ads instead of public service announcements (PSAs) raised conversion fro
 
 Absolute difference: 0.77 percentage points. Two-proportion z-test: z = 7.37, p < 0.001. Cohen's h = 0.053, a small effect in absolute terms.
 
-## Where the effect is largest
-Users who saw more ads converted far more often: 13–17% in the medium, high and very-high engagement groups versus about 1% in the low group, and the ad group beat the PSA group at every level. Ad exposure was not randomized, so this shows where conversions happen, not that more ads cause more conversions.
+## Exploratory segments (not randomized)
+Users who saw more ads converted far more often: 13–17% of ad-group users in the medium, high and very-high engagement groups versus about 1% in the low group, and the ad group beat the PSA group at every level. Ad exposure was not randomized, so this shows where conversions happen, not that more ads cause more conversions.
 
 ## Caveats
 - The PSA group is small (4% of users), so its rate is less precise than the ad group's.
