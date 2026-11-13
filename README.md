@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status](https://img.shields.io/badge/status-complete-success.svg)
 
-A comprehensive A/B test analysis evaluating the effectiveness of advertising campaigns versus public service announcements (PSAs) on user conversion rates. This project demonstrates end-to-end experimental design, statistical testing, and business analytics capabilities.
+An A/B test analysis comparing conversion rates for users shown advertisements versus public service announcements (PSAs), from data checks through statistical testing to a business recommendation.
 
 ## Project Overview
 
@@ -13,7 +13,7 @@ This analysis examines data from **588,101 users** across two experimental group
 ### Key Results
 - The data shows a **43.1% relative lift** in conversion for the ad group (2.55% vs 1.79%)
 - **Statistically significant** results (p < 0.001)
-- **Large sample size** ensures robust findings
+- **Effect size** is very small in absolute terms (Cohen's h = 0.053)
 - **Exploratory segmentation** by ad exposure (observational, not randomized)
 
 ## Business Question
@@ -24,10 +24,10 @@ This analysis examines data from **588,101 users** across two experimental group
 
 ```
 ab-test-marketing/
-├── data/
-│   ├── raw/                    # Original dataset
+├── data/                       # Not in the repo; see Getting Started
+│   ├── raw/
 │   │   └── marketing_AB.csv
-│   └── processed/              # Cleaned and processed data
+│   └── processed/              # Written by the notebook
 │       └── marketing_AB_processed.csv
 ├── notebooks/
 │   └── ab_test_analysis.ipynb # Main analysis notebook
@@ -116,7 +116,14 @@ cd Marketing-A-B-Test-Analysis
 pip install -r requirements.txt
 ```
 
-3. **Run the analysis**
+3. **Download the data**
+
+Download the [Kaggle Marketing A/B Testing dataset](https://www.kaggle.com/datasets/faviovaz/marketing-ab-testing), unzip it, and put `marketing_AB.csv` in `data/raw/`. Also create `data/processed/`, where the notebook saves its cleaned data.
+```bash
+mkdir -p data/raw data/processed
+```
+
+4. **Run the analysis**
 ```bash
 jupyter notebook notebooks/ab_test_analysis.ipynb
 ```
@@ -178,7 +185,7 @@ print(f"Required sample size per group: {n:,}")
 
 ## Learning Outcomes
 
-This project demonstrates proficiency in:
+This project covers:
 
 1. **Experimental Design**
    - Hypothesis formulation
@@ -196,9 +203,7 @@ This project demonstrates proficiency in:
    - Segmentation analysis
 
 4. **Business Analytics**
-   - Translating statistical results to business impact
-   - ROI calculation
-   - Actionable recommendations
+   - Translating statistical results to business recommendations
 
 5. **Technical Skills**
    - Python programming
@@ -210,7 +215,6 @@ This project demonstrates proficiency in:
 
 - [x] Documented experiment design
 - [x] Clean, well-commented code
-- [x] Statistical assumptions validated
 - [x] Multiple visualization types
 - [x] Executive summary for stakeholders
 - [x] Detailed technical documentation
@@ -241,8 +245,8 @@ This project demonstrates proficiency in:
 
 ## Author
 
-**[Jordan Shamukiga]**
-- Portfolio: [datascienceportfol.io/jordanshamu]
+**Jordan Shamukiga**
+- Portfolio: [datascienceportfol.io/jordanshamu](https://www.datascienceportfol.io/jordanshamu)
 
 ## License
 
