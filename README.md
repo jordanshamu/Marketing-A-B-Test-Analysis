@@ -48,7 +48,7 @@ ab-test-marketing/
 ## Methodology
 
 ### Experiment Design
-- **Type:** Two-group randomized controlled trial (RCT)
+- **Type:** Two-group test, assumed to be randomly assigned. The dataset description calls it an A/B test but doesn't document how users were assigned to ads or PSAs
 - **Groups:** 
   - Treatment: Shown advertisements (564,577 users)
   - Control: Shown PSAs (23,524 users)
@@ -78,6 +78,7 @@ ab-test-marketing/
 ### Statistical Significance
 - **P-value:** < 0.001 (highly significant)
 - **Effect Size (Cohen's h):** 0.053 (very small in absolute terms; the relative lift is large because the PSA base rate is 1.8%)
+- **Power:** The 23,524-user PSA group limits precision. The test had 52.5% power to detect a 10% relative lift (99.9% if the same users were split 50/50); the smallest lift detectable with 80% power is 13.9%
 - **Conclusion:** Strong evidence that ads improve conversion rates
 
 ### Segmentation Insights (exploratory)

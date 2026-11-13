@@ -3,10 +3,10 @@
 **Analyst:** Jordan Shamukiga · **Data:** Kaggle Marketing A/B Testing (588,101 real users)
 
 ## Bottom line
-The data shows a 43.1% relative lift in conversion for users shown ads (2.55%) over users shown public service announcements (PSAs, 1.79%). With 588,101 users the difference is not plausibly chance (p < 0.001). Ads should replace PSAs, provided a conversion is worth more than the extra ad cost per converted user.
+The data shows a 43.1% relative lift in conversion for users shown ads (2.55%) over users shown public service announcements (PSAs, 1.79%). The difference is unlikely to be chance (p < 0.001). Ads should replace PSAs, provided a conversion is worth more than the extra ad cost per converted user.
 
 ## What was tested
-- 564,577 users saw ads; 23,524 saw PSAs (a 96/4 split, with PSAs as the small control group).
+- 564,577 users saw ads; 23,524 saw PSAs (a 96/4 split, with PSAs as the small control group). The dataset doesn't document how users were assigned, so random assignment is assumed.
 - Outcome: whether the user converted.
 - Intended allocation: not documented (the dataset description says only that most users saw ads), so sample ratio mismatch can't be verified.
 - Checks before testing: no duplicate users; group sizes reviewed.
@@ -23,7 +23,7 @@ Absolute difference: 0.77 percentage points. Two-proportion z-test: z = 7.37, p 
 Users who saw more ads converted far more often: 13–17% of ad-group users in the medium, high and very-high engagement groups versus about 1% in the low group, and the ad group beat the PSA group at every level. Ad exposure was not randomized, so this shows where conversions happen, not that more ads cause more conversions.
 
 ## Caveats
-- The PSA group is small (4% of users), so its rate is less precise than the ad group's.
+- The PSA group is small (4% of users), so its rate is less precise than the ad group's. The test had 52.5% power to detect a 10% relative lift; only lifts of 13.9% or more had 80% power.
 - The data has conversions only; revenue per conversion and ad cost are not included.
 - A novelty effect is possible; watch conversion after rollout.
 
